@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسک دوره جاوااسکریپت</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="transactions-container">
+
+        <!-- header -->
+        <header class="header">
+          <div class="transactions-header">
+            <h1>لیست تراکنش ها</h1>
+            <div class="transactions-search-box">
+              <form>
+                <input type="text" id="search" placeholder="جستجوی تراکنش ...">
+              </form>
+            </div>
+          </div>
+          <!-- transaction loading btn -->
+          <div class="transactions-loading-btn">
+            <a href="#" class="btn" id="loadTransactionsBtn" >بارگذاری تراکنش ها</a>
+          </div>
+          <!-- transaction loading btn -->
+        </header>
+        <!-- header -->
+  
+        <!-- transactions box -->
+        <div id="transactionsBox"> </div>
+        <!-- <section class="transactions-box">
+
+          <div class="transactions-box-title">
+            <h2>لیست تراکنش های شما</h2>
+          </div>
+
+          <div class="transactions-box-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>ردیف</th>
+                  <th>نوع تراکنش</th>
+                  <th>مبلغ <i class="fa-solid fa-chevron-down"></i> </th>
+                  <th>شماره پیگیری</th>
+                  <th>تاریخ تراکنش <i class="fa-solid fa-chevron-down"></i></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>۱۰</td>
+                  <td id="inc" > افزایش اعتبار</td>
+                  <td id="price">۱٫۰۰۰٫۰۰۰</td>
+                  <td>۱۲۳۱۲۶۴۱۱</td>
+                  <td>ساعت ۱۲:۲۳   ۱۴۰۳/۰۸/۱۲ </td>
+                </tr>
+                <tr>
+                  <td>۹</td>
+                  <td id="dec">برداشت از حساب</td>
+                  <td id="price">۱۰٫۰۰۰٫۰۰۰</td>
+                  <td>۱۲۳۱۲۶۴۱۱</td>
+                  <td>ساعت ۱۲:۲۳  ۱۴۰۳/۰۸/۱۲ </td>
+                </tr>
+                <tr>
+                  <td>۱۰</td>
+                  <td id="inc">افزایش اعتبار</td>
+                  <td id="price">۱٫۰۰۰٫۰۰۰</td>
+                  <td>۱۲۳۱۲۶۴۱۱</td>
+                  <td>ساعت ۱۲:۲۳   ۱۴۰۳/۰۸/۱۲ </td>
+                </tr>
+                <tr>
+                  <td>۸</td>
+                  <td id="inc">افزایش اعتبار</td>
+                  <td id="price">۱٫۰۰۰٫۰۰۰</td>
+                  <td>۱۲۳۱۲۶۴۱۱</td>
+                  <td>ساعت ۱۲:۲۳   ۱۴۰۳/۰۸/۱۲ </td>
+                </tr>
+                <tr>
+                  <td>۷</td>
+                  <td id="inc">افزایش اعتبار</td>
+                  <td id="price">۱٫۰۰۰٫۰۰۰</td>
+                  <td>۱۲۳۱۲۶۴۱۱</td>
+                  <td>ساعت ۱۲:۲۳   ۱۴۰۳/۰۸/۱۲ </td>
+                </tr>
+                <tr>
+                  <td>۶</td>
+                  <td id="dec">برداشت از حساب</td>
+                  <td id="price">۱٫۰۰۰٫۰۰۰</td>
+                  <td>۱۲۳۱۲۶۴۱۱</td>
+                  <td>ساعت ۱۲:۲۳   ۱۴۰۳/۰۸/۱۲ </td>
+                </tr>
+                <tr>
+                  <td>۵</td>
+                  <td id="inc">افزایش اعتبار</td>
+                  <td id="price">۱٫۰۰۰٫۰۰۰</td>
+                  <td>۱۲۳۱۲۶۴۱۱</td>
+                  <td>ساعت ۱۲:۲۳   ۱۴۰۳/۰۸/۱۲ </td>
+                </tr>
+                <tr>
+                  <td>۴</td>
+                  <td id="inc">افزایش اعتبار</td>
+                  <td id="price">۱٫۰۰۰٫۰۰۰</td>
+                  <td>۱۲۳۱۲۶۴۱۱</td>
+                  <td>ساعت ۱۲:۲۳   ۱۴۰۳/۰۸/۱۲ </td>
+                </tr>
+                <tr>
+                  <td>۳</td>
+                  <td id="inc">افزایش اعتبار</td>
+                  <td id="price">۱٫۰۰۰٫۰۰۰</td>
+                  <td>۱۲۳۱۲۶۴۱۱</td>
+                  <td>ساعت ۱۲:۲۳   ۱۴۰۳/۰۸/۱۲ </td>
+                </tr>
+                <tr>
+                  <td>۲</td>
+                  <td id="inc">افزایش اعتبار</td>
+                  <td id="price">۱٫۰۰۰٫۰۰۰</td>
+                  <td>۱۲۳۱۲۶۴۱۱</td>
+                  <td>ساعت ۱۲:۲۳   ۱۴۰۳/۰۸/۱۲ </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section> -->
+        <!-- transactions box -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
